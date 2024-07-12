@@ -106,8 +106,14 @@
     width: 1380px;
   }
   @if $type == "side" {
+    //size
     height: 150px;
-    width: 250px;
+    width: 180px;
+
+    //border
+    border-radius: 20px;
+
+    //colors
     background-color: $main-colour;
   }
 }

@@ -21,7 +21,7 @@ export const Sidebar = ({ position }: SidebarProps) => {
           icon={
             <IoHomeOutline
               size={20}
-              color={position === "/" ? "#5615c1" : ""}
+              color={position === "/" || position === "/tasks" ? "#5615c1" : ""}
             />
           }
           isCurrent={position === "/"}

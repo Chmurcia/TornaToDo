@@ -1,14 +1,40 @@
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./App.scss";
+import styles from "./App.module.scss";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+
+import Dashboard from "./pages/Dashboard";
+import { Sidebar } from "./components/Sidebar";
+import Statistics from "./pages/Statistics";
+import Account from "./pages/Account";
+import { useState } from "react";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
-  const notify = () => toast.success("Wow so easy!");
-
+  const [position, setPosition] = useState("");
+  console.log(position);
   return (
-    <div>
-      <button onClick={notify}>Notify!</button>
-    </div>
+    <ThemeProvider>
+      <div className={styles.app}>
+        <BrowserRouter>
+          <div className={styles.layout}>
+            <Sidebar position={position} />
+            <Routes>
+              <Route
+                path="/"
+                element={<Dashboard setPosition={setPosition} />}
+              />
+              <Route
+                path="/stats"
+                element={<Statistics setPosition={setPosition} />}
+              />
+              <Route
+                path="/account"
+                element={<Account setPosition={setPosition} />}
+              />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 
