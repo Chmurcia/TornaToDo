@@ -1,0 +1,69 @@
+@import "./utils/variables.scss";
+
+.box {
+  //flex
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  //size
+  width: 550px;
+  height: 650px;
+
+  //font
+  font-family: "Roboto mono", monospace;
+
+  //colors
+  background-color: $dark-theme-front;
+
+  //border
+  border-radius: 30px 30px 50px 50px;
+}
+
+.name {
+  //flex
+  display: flex;
+  justify-content: center;
+
+  //padding
+  padding-top: 180px;
+
+  //color
+  color: $main-colour;
+
+  //font
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.buttons {
+  //flex
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.img {
+  //size
+  width: 250px;
+  height: 250px;
+
+  //colors
+  background-color: #ffffff;
+
+  //border
+  border-radius: 9999px;
+
+  //position
+  position: fixed;
+
+  //transform
+  transform: translate(150px, -125px);
+}
+
+.themes {
+  //flex
+  display: flex;
+}

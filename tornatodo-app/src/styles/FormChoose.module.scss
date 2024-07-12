@@ -1,0 +1,21 @@
+@import "./utils/mixins.scss";
+.chooseLeft,
+.chooseRight {
+  //flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //font
+  font-family: "Roboto mono", monospace;
+  font-size: 2em;
+  //size
+  width: 50%;
+  //border
+  border: none;
+}
+.chooseLeft {
+  @include sideMixin("left");
+}
+.chooseRight {
+  @include sideMixin("right");
+}

@@ -1,0 +1,33 @@
+@import "./utils/variables.scss";
+
+.task {
+  //flex
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  //font
+  font-family: "Roboto mono", monospace;
+  font-size: 1.5rem;
+
+  //padding
+  padding: 20px 30px 20px 30px;
+
+  //colors
+  background-color: $main-colour;
+
+  //border
+  border-radius: 20px;
+}
+
+.btn {
+  //border
+  border: none;
+
+  //colors
+  background-color: transparent;
+  color: $dark-theme-colour;
+
+  //cursor
+  cursor: pointer;
+}

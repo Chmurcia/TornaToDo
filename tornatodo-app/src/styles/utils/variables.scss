@@ -1,17 +1,31 @@
 // Main background colours
-$white-theme-bg: #e7e7e7;
+$light-theme-bg: #e7e7e7;
 $dark-theme-bg: #212430;
 
-$white-theme-front: #ffffff;
-$black-theme-front: #12141c;
+$light-theme-front: #ffffff;
+$dark-theme-front: #12141c;
 
 // Main colour
 $main-colour: #5615c1;
 
 // Main top colours
-$white-theme-top: #f4f4f4;
-$black-theme-top: #3c4053;
+$light-theme-top: #f4f4f4;
+$dark-theme-top: #3c4053;
 
-// Main theme colours (font)
-$white-theme-colour: $black-theme-front;
-$black-theme-colour: $white-theme-front;
+// Main text colours
+$light-theme-colour: $dark-theme-front;
+$dark-theme-colour: $light-theme-front;
+
+//Button colours
+$btn-white: #ffffff;
+$btn-purple: #5615c1;
+
+//Inputs' placeholder
+$inp-phd: rgba(87, 21, 193, 0.54);
+$inp-bg: #ffffff;
+
+// Choose colours
+$left-bg: #5615c1;
+
+$right-bg-light: #ffffff;
+$right-bg-dark: #12141c;

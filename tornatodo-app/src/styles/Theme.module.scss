@@ -1,0 +1,9 @@
+@import "./utils/mixins.scss";
+
+.themeLeft {
+  @include themeMixin("left");
+}
+
+.themeRight {
+  @include themeMixin("right");
+}

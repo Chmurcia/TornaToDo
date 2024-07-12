@@ -1,0 +1,28 @@
+@import "./utils/variables.scss";
+.group {
+  //flex
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.opt {
+  //border
+  border: none;
+
+  //colors
+  background-color: transparent;
+  color: $dark-theme-colour;
+
+  //font
+  font-family: "Roboto mono", monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  //transition
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:focus {
+    color: $main-colour;
+  }
+}

@@ -1,0 +1,14 @@
+@import "./utils/mixins.scss";
+
+.frame-rectangle {
+  @include frameMixin("rectangle");
+}
+.frame-vertical {
+  @include frameMixin("vertical");
+}
+.frame-horizontal {
+  @include frameMixin("horizontal");
+}
+.frame-side {
+  @include frameMixin("side");
+}

@@ -1,0 +1,35 @@
+@import "./utils/variables.scss";
+
+.input {
+  //size
+  height: 80px;
+  width: 420px;
+
+  //border
+  border: none;
+  border-radius: 10px;
+
+  //font
+  font-weight: 300;
+  font-size: 1em;
+  font-family: "Roboto mono", monospace;
+
+  //color
+  color: $inp-phd;
+  background-color: $inp-bg;
+
+  //outline
+  outline: none;
+
+  //shadow
+  -webkit-box-shadow: 0px 0px 5.2px -1px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 5.2px -1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 5.2px -1px rgba(255, 255, 255, 1);
+
+  //transition
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    transform: scaleX(1.1);
+  }
+}

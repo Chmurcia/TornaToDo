@@ -1,0 +1,21 @@
+@import "./utils/variables.scss";
+.step {
+  //flex
+  display: flex;
+  gap: 8px;
+
+  //font
+  font-family: "Roboto mono", monospace;
+}
+
+.btn {
+  //border
+  border: none;
+
+  //colors
+  background-color: transparent;
+  color: $dark-theme-colour;
+
+  //cursor
+  cursor: pointer;
+}

@@ -1,0 +1,14 @@
+@import "./utils/mixins.scss";
+
+.btn-white-small {
+  @include buttonMixin("white", "small");
+}
+.btn-purple-small {
+  @include buttonMixin("purple", "small");
+}
+.btn-white-huge {
+  @include buttonMixin("white", "huge");
+}
+.btn-purple-huge {
+  @include buttonMixin("purple", "huge");
+}

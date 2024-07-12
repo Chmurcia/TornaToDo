@@ -1,0 +1,152 @@
+@import "./variables.scss";
+
+@mixin buttonMixin($btn-type, $btn-size) {
+  //border
+  border: none;
+  border-radius: 15px;
+
+  //font
+  font-family: "Roboto mono", monospace;
+
+  //transition
+  transition: all 0.3s ease-in-out;
+
+  @if $btn-size == "small" {
+    //size
+    min-width: 210px;
+    height: 50px;
+
+    //space
+    padding: 0 8px 0 8px;
+
+    //font
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    @if $btn-type == "white" {
+      //colors
+      background-color: $btn-white;
+      color: $btn-purple;
+    }
+    @if $btn-type == "purple" {
+      //colors
+      background-color: $btn-purple;
+      color: $btn-white;
+    }
+  }
+  @if $btn-size == "huge" {
+    //size
+    min-width: 310px;
+    height: 80px;
+
+    //space
+    padding: 0 15px 0 15px;
+
+    //font
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    @if $btn-type == "white" {
+      //colors
+      background-color: $btn-white;
+      color: $btn-purple;
+    }
+    @if $btn-type == "purple" {
+      //colors
+      background-color: $btn-purple;
+      color: $btn-white;
+    }
+  }
+  &:hover {
+    //cursor
+    cursor: pointer;
+
+    //transform
+    transform: scale(1.1);
+  }
+}
+
+@mixin sideMixin($side) {
+  @if $side == "left" {
+    //border
+    border-radius: 40px 0 80px 0;
+    //colors
+    background-color: $left-bg;
+  }
+  @if $side == "right" {
+    //border
+    border-radius: 0 40px 0 80px;
+    //colors
+    color: $left-bg;
+    background-color: $right-bg-dark;
+  }
+}
+
+@mixin frameMixin($type) {
+  //border
+  border-radius: 30px;
+
+  //colors
+  background-color: $dark-theme-front;
+
+  //default size
+  height: 470px;
+  width: 650px;
+  @if $type == "rectangle" {
+    //size
+    // width: 650px;
+    height: 470px;
+  }
+  @if $type == "horizontal" {
+    //size
+    // width: 650px;
+    height: 900px;
+  }
+  @if $type == "vertical" {
+    //size
+    // height: 470px;
+    width: 1380px;
+  }
+  @if $type == "side" {
+    height: 150px;
+    width: 250px;
+    background-color: $main-colour;
+  }
+}
+
+//frame-rectangle // w: 664, h: 470
+//frame-horizontal // w: 700, h: 1000
+//frame-vertical // w: 1380, h: 470
+// border-radius: 30
+
+@mixin themeMixin($side) {
+  //flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  //font
+  font-family: "Roboto mono", monospace;
+  font-size: 1.5rem;
+  color: $main-colour;
+
+  //size
+  width: 275px;
+  height: 100px;
+
+  //border
+  border: none;
+  @if $side == "left" {
+    //colors
+    background-color: $light-theme-front;
+
+    //border
+    border-radius: 0 30px 0 50px;
+  }
+  @if $side == "right" {
+    //colors
+    background-color: $dark-theme-front;
+
+    //border
+    border-radius: 30px 0 50px 0;
+  }
+  cursor: pointer;
+}

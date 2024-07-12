@@ -1,0 +1,56 @@
+@import "./utils/variables.scss";
+
+.box {
+  //flex
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //size
+  height: 800px;
+  width: 700px;
+  //colors
+  background-color: $main-colour;
+  //border
+  border-radius: 40px;
+  //shadow
+  -webkit-box-shadow: 0px 0px 7.2px -1px $main-colour;
+  -moz-box-shadow: 0px 0px 7.2px -1px $main-colour;
+  box-shadow: 0px 0px 7.2px -1px $main-colour;
+}
+
+.choose {
+  //flex
+  display: flex;
+
+  //size
+  height: 10%;
+  width: 100%;
+}
+
+.group {
+  //flex
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  //size
+  height: 90%;
+  width: 100%;
+
+  //space
+  padding: 20px 0 0 0;
+}
+
+.inputs {
+  //flex
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 40px;
+}
