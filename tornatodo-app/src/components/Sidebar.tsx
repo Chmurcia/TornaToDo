@@ -6,28 +6,54 @@ import styles from "./../styles/Sidebar.module.scss";
 import { IoHomeOutline } from "react-icons/io5";
 import { IoStatsChartOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
-import { IoSettingsOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 
-export const Sidebar = () => {
+type SidebarProps = { position: string };
+
+export const Sidebar = ({ position }: SidebarProps) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.top}>
         <Logo />
       </div>
       <div className={styles.middle}>
-        <Option icon={<IoHomeOutline size={20} />} to="/">
-          Homepage
+        <Option
+          icon={
+            <IoHomeOutline
+              size={20}
+              color={position === "/" ? "#5615c1" : ""}
+            />
+          }
+          isCurrent={position === "/"}
+          to="/"
+        >
+          Dashboard
         </Option>
-        <Option icon={<IoStatsChartOutline size={20} />} to="/stats">
+        <Option
+          icon={
+            <IoStatsChartOutline
+              size={20}
+              color={position === "/stats" ? "#5615c1" : ""}
+            />
+          }
+          isCurrent={position === "/stats"}
+          to="/stats"
+        >
           Statistics
         </Option>
-        <Option icon={<CiUser size={25} />} to="/acc">
+        <Option
+          icon={
+            <CiUser
+              size={25}
+              color={position === "/account" ? "#5615c1" : ""}
+            />
+          }
+          isCurrent={position === "/account"}
+          to="/account"
+        >
           Account
         </Option>
-        <Option icon={<IoSettingsOutline size={20} />} to="/setts">
-          Settings
-        </Option>
+        <Backframe type="side">.</Backframe>
         <Backframe type="side">.</Backframe>
         <Backframe type="side">.</Backframe>
       </div>
