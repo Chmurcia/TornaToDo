@@ -7,12 +7,20 @@ import { IoHomeOutline } from "react-icons/io5";
 import { IoStatsChartOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+import { PiProjectorScreenThin } from "react-icons/pi";
+import { useTheme } from "../hooks/useTheme";
 
 type SidebarProps = { position: string };
 
 export const Sidebar = ({ position }: SidebarProps) => {
+  const { theme } = useTheme();
+
   return (
-    <div className={styles.sidebar}>
+    <div
+      className={`${styles.sidebar} ${
+        theme === "light" ? styles.light : styles.dark
+      }`}
+    >
       <div className={styles.top}>
         <Logo />
       </div>
@@ -21,19 +29,49 @@ export const Sidebar = ({ position }: SidebarProps) => {
           icon={
             <IoHomeOutline
               size={20}
-              color={position === "/" || position === "/tasks" ? "#5615c1" : ""}
+              color={
+                position === "/"
+                  ? "#5615c1"
+                  : theme === "light"
+                  ? "#12141c"
+                  : "#FFFFFF"
+              }
             />
           }
           isCurrent={position === "/"}
           to="/"
         >
-          Dashboard
+          Homepage
+        </Option>
+        <Option
+          icon={
+            <PiProjectorScreenThin
+              size={20}
+              color={
+                position === "/tasks"
+                  ? "#5615c1"
+                  : theme === "light"
+                  ? "#12141c"
+                  : "#FFFFFF"
+              }
+            />
+          }
+          isCurrent={position === "/tasks"}
+          to="/tasks"
+        >
+          Tasks
         </Option>
         <Option
           icon={
             <IoStatsChartOutline
               size={20}
-              color={position === "/stats" ? "#5615c1" : ""}
+              color={
+                position === "/stats"
+                  ? "#5615c1"
+                  : theme === "light"
+                  ? "#12141c"
+                  : "#FFFFFF"
+              }
             />
           }
           isCurrent={position === "/stats"}
@@ -45,7 +83,13 @@ export const Sidebar = ({ position }: SidebarProps) => {
           icon={
             <CiUser
               size={25}
-              color={position === "/account" ? "#5615c1" : ""}
+              color={
+                position === "/account"
+                  ? "#5615c1"
+                  : theme === "light"
+                  ? "#12141c"
+                  : "#FFFFFF"
+              }
             />
           }
           isCurrent={position === "/account"}
@@ -53,7 +97,7 @@ export const Sidebar = ({ position }: SidebarProps) => {
         >
           Account
         </Option>
-        <Backframe type="side">.</Backframe>
+
         <Backframe type="side">.</Backframe>
         <Backframe type="side">.</Backframe>
       </div>

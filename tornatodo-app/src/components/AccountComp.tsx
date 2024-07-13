@@ -1,16 +1,19 @@
-import { Button } from "../ui/Button";
-import { Theme } from "../ui/Theme";
 import styles from "./../styles/AccountComp.module.scss";
 
-type AccProps = {
-  name: string;
-};
+import { Button } from "../ui/Button";
+import { Theme } from "../ui/Theme";
+import { useTheme } from "../hooks/useTheme";
 
-export const AccountComp = ({ name }: AccProps) => {
+export const AccountComp = () => {
+  const { theme } = useTheme();
   return (
-    <div className={styles.box}>
+    <div
+      className={`${styles.box} ${
+        theme === "light" ? styles.light : styles.dark
+      }`}
+    >
       <div className={styles.img}></div>
-      <p className={styles.name}>{name}</p>
+      <p className={styles.name}>Username_Superb_Name</p>
       <div className={styles.buttons}>
         <Button type="purple" size="huge">
           Change Username

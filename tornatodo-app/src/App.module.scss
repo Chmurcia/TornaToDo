@@ -8,10 +8,6 @@
 
   //size
   height: 100vh;
-
-  //colors
-  background-color: $dark-theme-bg;
-  color: $dark-theme-colour;
 }
 
 .layout {
@@ -25,4 +21,16 @@
 
   //padding
   padding: 0 20px 0 20px;
+}
+
+// THEMES
+
+.light {
+  //colors
+  background-color: $light-theme-bg;
+}
+
+.dark {
+  //colors
+  background-color: $dark-theme-bg;
 }

@@ -12,3 +12,10 @@
 .frame-side {
   @include frameMixin("side");
 }
+
+.light:not(.frame-side) {
+  background-color: $light-theme-front;
+}
+.dark:not(.frame-side) {
+  background-color: $dark-theme-front;
+}

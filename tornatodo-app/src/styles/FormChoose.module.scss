@@ -19,3 +19,11 @@
 .chooseRight {
   @include sideMixin("right");
 }
+
+.light {
+  background-color: $right-bg-light;
+}
+
+.dark {
+  background-color: $right-bg-dark;
+}

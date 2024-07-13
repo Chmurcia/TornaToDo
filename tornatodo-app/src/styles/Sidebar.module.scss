@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: space-between;
 
-  //colors
-  background-color: $dark-theme-front;
+  //font
+  font-family: "Roboto mono", monospace;
 
   //size
   height: 900px;
@@ -29,9 +29,6 @@
 
   //size
   height: 80px;
-
-  //colors
-  background-color: $dark-theme-top;
 }
 .middle {
   //flex
@@ -57,7 +54,7 @@
   padding: 20px 10px 20px 10px;
 
   //font
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .img {
@@ -70,4 +67,25 @@
 
   //colors
   background-color: azure;
+}
+
+// THEMES
+
+.light {
+  background-color: $light-theme-front;
+  .bottom {
+    color: $light-theme-colour;
+  }
+  .top {
+    background-color: $light-theme-top;
+  }
+}
+.dark {
+  background-color: $dark-theme-front;
+  .bottom {
+    color: $dark-theme-colour;
+  }
+  .top {
+    background-color: $dark-theme-top;
+  }
 }

@@ -1,3 +1,11 @@
+import { useTheme } from "../hooks/useTheme";
+
 export const Logo = () => {
-  return <img src="./../../Logo.svg" alt="logo" />;
+  const { theme } = useTheme();
+
+  return theme === "light" ? (
+    <img src="./../../Logo2.svg" alt="logo" />
+  ) : (
+    <img src="./../../Logo.svg" alt="logo" />
+  );
 };

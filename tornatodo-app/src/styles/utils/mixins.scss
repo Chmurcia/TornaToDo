@@ -70,22 +70,19 @@
     border-radius: 40px 0 80px 0;
     //colors
     background-color: $left-bg;
+    color: #ffffff;
   }
   @if $side == "right" {
     //border
     border-radius: 0 40px 0 80px;
     //colors
     color: $left-bg;
-    background-color: $right-bg-dark;
   }
 }
 
 @mixin frameMixin($type) {
   //border
   border-radius: 30px;
-
-  //colors
-  background-color: $dark-theme-front;
 
   //default size
   height: 470px;
